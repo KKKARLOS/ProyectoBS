@@ -58,7 +58,7 @@ namespace Proyecto.Logica.BL
         /// <param name="oClsPosibleClientes"></param>
         /// <param name="iOpcion"></param>
         /// <returns>
-        /// Mensaje de operacion
+        /// Mensaje de operacionnnnnnn
         /// </returns>
         public string setAdministrarPosiblesCLientes(Models.clsPosibleClientes oClsPosibleClientes, int iOpcion)
         {
