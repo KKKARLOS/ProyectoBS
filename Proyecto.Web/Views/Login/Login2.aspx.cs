@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Proyecto.Web.Views.Login
+{
+    public partial class Login : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //if (!IsPostBack)
+            //    ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>swal('Pagina cargada!', 'Clica al botón para continuar!', 'success');</script>");
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string stMensaje = string.Empty;
+                if (string.IsNullOrEmpty(txtEmail.Value)) stMensaje += "Email, ";
+                if (string.IsNullOrEmpty(txtPassword.Value)) stMensaje += "Password, ";
+
+                if (!string.IsNullOrEmpty(stMensaje)) throw new Exception("Indica el " + stMensaje.TrimEnd(','));
+                Proyecto.Logica.Models.clsUsuarios olsUsuarios = new Logica.Models.clsUsuarios();
+                olsUsuarios.stLogin = txtEmail.Value;
+                olsUsuarios.stPassword = txtPassword.Value;
+
+                Proyecto.Web.Controllers.LoginController oLoginController = new Controllers.LoginController();
+                bool bandera = oLoginController.getValidarUsuarioController(olsUsuarios);
+                if (bandera) Response.Redirect("../Index/Index.aspx");
+                else throw new Exception("Usuario o password incorrectos");
+            }
+            catch (Exception ex)
+            {
+
+                ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>swal('Error!', '"+ex.Message+"' , 'error');</script>"); 
+            }
+        }
+    }
+}

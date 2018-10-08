@@ -1,0 +1,6 @@
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\Proyecto.Logica.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\Proyecto.Logica.pdb
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.csprojAssemblyReference.cache
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.csproj.CoreCompileInputs.cache
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.pdb
