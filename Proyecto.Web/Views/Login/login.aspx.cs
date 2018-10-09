@@ -13,6 +13,11 @@ namespace Proyecto.Web.Views.Login
         {
 
         }
+        /// <summary>
+        /// EVENTO CLICK AL PULSAR EL BOTON DE LOGIN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             try
