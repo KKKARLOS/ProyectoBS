@@ -83,6 +83,11 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Contactos</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Tareas/Tareas.aspx">
+            <i class="fas fa-fw fa-clipboard-check"></i>
+            <span>Tareas</span></a>
+        </li>
       </ul>
 
       <div id="content-wrapper">

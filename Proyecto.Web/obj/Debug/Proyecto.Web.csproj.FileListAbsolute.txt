@@ -58,3 +58,4 @@ C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\obj\Debug\Proyecto
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\obj\Debug\Proyecto.Web.pdb
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\Proyecto.Logica.dll
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\Proyecto.Logica.pdb
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\AjaxControlToolkit.dll
