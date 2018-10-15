@@ -59,3 +59,8 @@ C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\obj\Debug\Proyecto
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\Proyecto.Logica.dll
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\Proyecto.Logica.pdb
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\AjaxControlToolkit.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\EntityFramework.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\EntityFramework.SqlServer.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\Proyecto.Logica.dll.config
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\EntityFramework.xml
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Web\bin\EntityFramework.SqlServer.xml

@@ -80,8 +80,8 @@ namespace Proyecto.Web.Views.PosiblesClientes
             }
             catch (Exception ex)
             {
-
-                ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>swal('Error!', '"+ex.Message+"' , 'error');</script>"); ;
+                ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>alert('Error!  '" + ex.Message + "');</script>");
+                //ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>swal('Error!', '"+ex.Message+"' , 'error');</script>"); 
             }
         }
 
@@ -119,9 +119,9 @@ namespace Proyecto.Web.Views.PosiblesClientes
                         stTelefono = String.Empty,
                         stCorreo = String.Empty
                    };
-                    Proyecto.Web.Controllers.PosiblesClientesController oPosiblesClientesController = new Controllers.PosiblesClientesController();
-                    ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>swal('Eliminación realizada', '" + oPosiblesClientesController.setAdministrarConsultarPosiblesClientesController(oClsPosibleClientes, int.Parse(lblOpcion.Text)) + "' , 'info');</script>");
-                    limpiarRegistro();
+                   Proyecto.Web.Controllers.PosiblesClientesController oPosiblesClientesController = new Controllers.PosiblesClientesController();
+                   ClientScript.RegisterStartupScript(GetType(), "Mensaje", "<script>swal('Eliminación realizada', '" + oPosiblesClientesController.setAdministrarConsultarPosiblesClientesController(oClsPosibleClientes, int.Parse(lblOpcion.Text)) + "' , 'info');</script>");
+                   limpiarRegistro();
                 }
                 getPosiblesClientes();
             }

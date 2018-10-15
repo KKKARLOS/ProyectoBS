@@ -4,3 +4,9 @@ C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proye
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.csproj.CoreCompileInputs.cache
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.dll
 C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.pdb
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\Proyecto.Logica.dll.config
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\EntityFramework.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\EntityFramework.xml
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Datos\Cursos Empresa\Visual Studio\ProyectoBS\Proyecto.Logica\obj\Debug\Proyecto.Logica.csproj.CopyComplete

@@ -20,10 +20,10 @@ namespace Proyecto.Web.Controllers
                 Proyecto.Logica.BL.clsEstado oClsEstado = new Logica.BL.clsEstado();
                 return oClsEstado.getConsultarEstados();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
         /// <summary>
@@ -39,10 +39,74 @@ namespace Proyecto.Web.Controllers
                 Proyecto.Logica.BL.clsPrioridad oClsPrioridad = new Logica.BL.clsPrioridad();
                 return oClsPrioridad.getConsultarPrioridad();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
+            }
+        }
+        public string addTareas(Proyecto.Logica.Models.clsTareas oClsTareas)
+        {
+            try
+            {
+                Proyecto.Logica.BL.clsTareas oclsTareas = new Logica.BL.clsTareas();
+                return oclsTareas.addTareas(oClsTareas);            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public string updateTareas(Proyecto.Logica.Models.clsTareas oClsTareas)
+        {
+            try
+            {
+                Proyecto.Logica.BL.clsTareas oclsTareas = new Logica.BL.clsTareas();
+                return oclsTareas.updateTareas(oClsTareas);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public string deleteTareas(Proyecto.Logica.Models.clsTareas oClsTareas)
+        {
+            try
+            {
+                Proyecto.Logica.BL.clsTareas oclsTareas = new Logica.BL.clsTareas();
+                return oclsTareas.deleteTareas(oClsTareas);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public List<Proyecto.Logica.Models.clsTareas> getAllTareas()
+        {
+            try
+            {
+                Proyecto.Logica.BL.clsTareas oclsTareas = new Logica.BL.clsTareas();
+                return oclsTareas.getAllTareas();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public List<Proyecto.Logica.Models.clsTareas> getTarea(Proyecto.Logica.Models.clsTareas oClsTareas)
+        {
+            try
+            {
+                Proyecto.Logica.BL.clsTareas oclsTareas = new Logica.BL.clsTareas();
+                return oclsTareas.getTarea(oClsTareas);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

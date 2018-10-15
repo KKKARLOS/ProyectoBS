@@ -40,19 +40,18 @@
             <div class="form-group">
               <div class="checkbox">
                 <label>
-                  <input runat="server" type="checkbox" value="remember-me"/>
-                  Recordar contraseña
+                  <input runat="server" id="chkRecordar" type="checkbox" value="remember-me" checked="checked"/>
+                  Recordar email
                 </label>
               </div>
-         </div>              
+            </div>              
         </div>
 
-        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary btn-block" OnClick="btnLogin_Click" />
-
+        <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" style="margin-left:30px;margin-right:30px" OnClick="btnLogin_Click" />
           <div class="text-center">
-            <a class="d-block small mt-3" href="../Register/Register.aspx">Register an Account
+            <a class="d-block small mt-3" href="../CrearCuenta/CrearCuenta.aspx">Crear una cuenta
               </a>
-            &nbsp;<a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+            &nbsp;<a class="d-block small" style="margin-bottom:20px" href="../RecuperarPassword/RecurperarPassword.aspx">Olvidastes el Password?</a>
           </div>
         </div>
     </div>

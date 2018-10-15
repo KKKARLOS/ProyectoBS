@@ -11,7 +11,7 @@ namespace Proyecto.Web.Views.Index
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            imgCuenta.ImageUrl = "~/images/" + Session["Email"] + ".png";
         }
     }
 }

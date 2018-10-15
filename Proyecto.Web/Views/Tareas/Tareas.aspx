@@ -19,15 +19,22 @@
                  <%--Fila 2--%>
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-6">
+                         <div class="col-md-4">
+                            <asp:Label runat="server" ID="lblCodigo" Text="Codigo de la tarea"></asp:Label>
+                            <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control"></asp:TextBox>
+                            <ajaxToolkit:TextBoxWatermarkExtender ID="twmtCodigo" runat="server"
+                                TargetControlID="txtCodigo"
+                                WatermarkText="Codigo Tarea" />
+                        </div>
+                        <div class="col-md-4">
                             <asp:Label runat="server" ID="lblTitularTarea" Text="Titular de la tarea"></asp:Label>
-                            <asp:TextBox runat="server" ID="txtTitularTarea" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtTitular" CssClass="form-control"></asp:TextBox>
                             <ajaxToolkit:TextBoxWatermarkExtender ID="tbxTitularTarea" runat="server"
-                                TargetControlID="txtTitularTarea"
+                                TargetControlID="txtTitular"
                                 WatermarkText="Introduzca el titular de la tarea"
                                 WatermarkCssClass="watermarked" />
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <asp:Label runat="server" ID="lblAsunto" Text="Asunto"></asp:Label>
                             <asp:TextBox runat="server" ID="txtAsunto" CssClass="form-control"></asp:TextBox>
                             <ajaxToolkit:TextBoxWatermarkExtender ID="tbxAsunto" runat="server"
@@ -65,7 +72,7 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <asp:Label runat="server" ID="lblCuenta" Text="Fecha de vencimiento"></asp:Label>
+                            <asp:Label runat="server" ID="lblCuenta" Text="Cuenta"></asp:Label>
                             <asp:TextBox runat="server" ID="txtCuenta" CssClass="form-control"></asp:TextBox>
                             <ajaxToolkit:TextBoxWatermarkExtender  ID="tbxCuenta"  runat="server"
                                 TargetControlID="txtCuenta"
@@ -110,6 +117,92 @@
                         </div>
                     </div>
                 </div>                    
+
+                    
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-sm-12">
+                            <asp:Button  runat="server" id="btnGuardar" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
+                            <asp:Button  runat="server" id="btnCancelar" Text="Cancelar" CssClass="btn btn-primary" OnClick="btnCancelar_Click" />
+                        </div> 
+                    </div>
+                </div>  
+                <%--Fila 8--%>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-sm-12">
+                            <h3><b>Resultado</b></h3>
+                            <asp:Label runat="server" ID="lblSubtitulo" Text="Resultado" />
+                        </div> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-sm-12" style="overflow:auto">
+                            <asp:gridVIew runat="server" Id="gvwDatos" 
+                                width="100%" 
+                                AutoGenerateColumns="False" 
+                                EmptyDataText="No se encontraron registros" 
+                                CellPadding="3" 
+                                BorderStyle="None"
+                                ForeColor="#333333" 
+                                GridLines="Vertical"
+                                OnRowCommand="gvwDatos_RowCommand"
+                                >
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <Columns>
+                                    <%--Representacion de datos en controles wevb--%>
+                                    <asp:TemplateField visible="false">
+                                        <itemTemplate>
+                                            <asp:Label runat="server" ID="lbCodigo" Text='<%#Bind("inCodigo")%>'></asp:Label>
+                                            <asp:Label runat="server" ID="lbCodigoEstado" Text='<%#Bind("oClsEstado.inEstaCodigo")%>'></asp:Label>
+                                            <asp:Label runat="server" ID="lbCodigoPrioridad" Text='<%#Bind("oClsPrioridad.inCodigo")%>'></asp:Label>
+                                        </itemTemplate>
+                                    </asp:TemplateField>
+                                    <%--Representacion de datos en celdas
+                                    <asp:BoundField HeaderText="Identificacion" DataField="clieIdentificacion" />--%>
+                                    <asp:BoundField HeaderText="Titular" DataField="stTitular" />
+                                    <asp:BoundField HeaderText="Asunto" DataField="stAsunto" />
+                                    <asp:BoundField HeaderText="Fecha Vencimiento" DataField="stFechaVencimiento" />
+                                    <asp:BoundField HeaderText="Contacto" DataField="stContacto" />
+                                    <asp:BoundField HeaderText="Cuenta" DataField="stCuenta" />
+                                    <asp:BoundField HeaderText="Estado" DataField="oClsEstado.stDescripcion" />
+                                    <asp:BoundField HeaderText="Prioridad" DataField="oClsPrioridad.stDescripcion" />
+                                    <asp:BoundField HeaderText="Enviar mensaje" DataField="stEnviarMensaje" />
+                                    <asp:BoundField HeaderText="Repetir" DataField="stRepetir" />
+                                    <asp:BoundField HeaderText="Descripcion" DataField="stDescripcion" />
+                                    <asp:TemplateField HeaderText="Editar">
+                                        <itemTemplate>                                    
+                                            <asp:ImageButton runat="server" ID="ibEditar" CommandName="Editar" ImageUrl="~/Resources/Images/icons8-editar-26.png" CommandArgument='<%#((GridViewRow) Container).RowIndex%>'></asp:ImageButton>
+                                        </itemTemplate>
+                                        <ItemStyle HorizontalAlign="Center" />
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Eliminar">
+                                        <itemTemplate>                                    
+                                            <asp:ImageButton runat="server" ID="ibEliminar" CommandName="Eliminar" ImageUrl="~/Resources/Images/icons8-eliminar-26.png" CommandArgument='<%#((GridViewRow) Container).RowIndex%>'></asp:ImageButton>
+                                        </itemTemplate>
+                                        <ItemStyle HorizontalAlign="Center" />
+                                    </asp:TemplateField>
+                                </Columns>
+
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+
+                            </asp:gridVIew>
+                        </div> 
+                    </div>
+                </div>    
+
+
+
             </div>
         </div>    
     </div>

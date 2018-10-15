@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e674304925ec406a90fa02ca8507f01f" Name="Diagram1">
+        <EntityTypeShape EntityType="SqlServerModel.Estudiantes" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SqlServerModel.tbEstadoTareas" Width="1.5" PointX="1" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SqlServerModel.tbPrioridad" Width="1.5" PointX="1" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SqlServerModel.tbUsuarios" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SqlServerModel.tbPosiblesClientes" Width="1.5" PointX="7.875" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SqlServerModel.tbTareas" Width="1.5" PointX="3.25" PointY="0.75" />
+        <AssociationConnector Association="SqlServerModel.FK_tbTareas_tbEstadoTareas1" />
+        <AssociationConnector Association="SqlServerModel.FK_tbTareas_tbPrioridad1" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -11,7 +11,19 @@ namespace Proyecto.Web.Resources.Templates
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                string[] aEmail = null;
+                if (Session["Email"] != null)
+                {
+                    aEmail = Session["Email"].ToString().Split('@');
+                    lblUsuario.Text = aEmail[0];
+                }
+                else
+                {
+                    Response.Redirect("../../Views/Login/login.aspx");
+                }
+            }
         }
     }
 }

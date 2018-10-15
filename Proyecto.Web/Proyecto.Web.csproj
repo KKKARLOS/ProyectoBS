@@ -47,6 +47,12 @@
     <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -166,18 +172,21 @@
     <Content Include="vendor\morrisjs\morris.min.js" />
     <Content Include="vendor\raphael\raphael.js" />
     <Content Include="vendor\raphael\raphael.min.js" />
+    <Content Include="Views\CrearCuenta\CrearCuenta.aspx" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Login\login.aspx" />
-    <Content Include="Views\Login\Login2.aspx" />
     <Content Include="Views\PosiblesClientes\PosiblesClientes.aspx" />
+    <Content Include="Views\RecuperarPassword\RecurperarPassword.aspx" />
     <Content Include="Views\Register\Register.aspx" />
     <Content Include="Views\Register\Register2.aspx" />
     <Content Include="Views\Tareas\Tareas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CrearCuentaController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PosiblesClientesController.cs" />
+    <Compile Include="Controllers\RecuperarContraseñaController.cs" />
     <Compile Include="Controllers\TareasController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Templates\Template.Master.cs">
@@ -186,6 +195,13 @@
     </Compile>
     <Compile Include="Resources\Templates\Template.Master.designer.cs">
       <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrearCuenta\CrearCuenta.aspx.cs">
+      <DependentUpon>CrearCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearCuenta\CrearCuenta.aspx.designer.cs">
+      <DependentUpon>CrearCuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Index\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -201,19 +217,19 @@
     <Compile Include="Views\Login\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login\Login2.aspx.cs">
-      <DependentUpon>Login2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Login\Login2.aspx.designer.cs">
-      <DependentUpon>Login2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.cs">
       <DependentUpon>PosiblesClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.designer.cs">
       <DependentUpon>PosiblesClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecuperarPassword\RecurperarPassword.aspx.cs">
+      <DependentUpon>RecurperarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RecuperarPassword\RecurperarPassword.aspx.designer.cs">
+      <DependentUpon>RecurperarPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Register\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

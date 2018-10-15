@@ -44,18 +44,16 @@
 
       <a class="navbar-brand mr-1" href="../../Views/Index/Index.aspx">CRM</a>
 
-      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+<%--      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
-      </button>
+      </button>--%>
 
       <!-- Navbar -->
             <%----%>
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="../Register/Register.aspx">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Registrar</span></a>
+            <asp:Label runat="server" ID="lblUsuario" style="color: white;position: relative;top: 7px;"></asp:Label>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">

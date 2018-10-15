@@ -21,10 +21,10 @@ namespace Proyecto.Web.Controllers
                 Proyecto.Logica.BL.clsPosiblesClientes oPosiblesClientes = new Logica.BL.clsPosiblesClientes();
                 return oPosiblesClientes.getPosiblesCLientes();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
         public string setAdministrarConsultarPosiblesClientesController(Proyecto.Logica.Models.clsPosibleClientes oClsPosibleClientes, int iOpcion)
@@ -34,10 +34,10 @@ namespace Proyecto.Web.Controllers
                 Proyecto.Logica.BL.clsPosiblesClientes oPosiblesClientes = new Logica.BL.clsPosiblesClientes();
                 return oPosiblesClientes.setAdministrarPosiblesCLientes(oClsPosibleClientes,iOpcion);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }

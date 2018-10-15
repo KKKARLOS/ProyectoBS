@@ -11,7 +11,13 @@ namespace Proyecto.Web.Views.Login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.Cookies["cookieEmail"].Value != null)
+                {
+                    txtEmail.Value = Request.Cookies["cookieEmail"].Value.ToString();
+                }
+            }
         }
         /// <summary>
         /// EVENTO CLICK AL PULSAR EL BOTON DE LOGIN
@@ -22,6 +28,8 @@ namespace Proyecto.Web.Views.Login
         {
             try
             {
+                Session.RemoveAll();
+
                 string stMensaje = string.Empty;
                 if (string.IsNullOrEmpty(txtEmail.Value)) stMensaje += "Email, ";
                 if (string.IsNullOrEmpty(txtPassword.Value)) stMensaje += "Password, ";
@@ -33,7 +41,24 @@ namespace Proyecto.Web.Views.Login
 
                 Proyecto.Web.Controllers.LoginController oLoginController = new Controllers.LoginController();
                 bool bandera = oLoginController.getValidarUsuarioController(olsUsuarios);
-                if (bandera) Response.Redirect("../Index/Index.aspx");
+                if (bandera)
+                {
+                    Session["Email"] = txtEmail.Value;
+                    if (chkRecordar.Checked)
+                    {
+                        HttpCookie cookie = new HttpCookie("cookieEmail",txtEmail.Value);
+                        cookie.Expires = DateTime.Now.AddDays(2);
+                        Response.Cookies.Add(cookie);
+                    }
+                    else
+                    {
+                        HttpCookie cookie = new HttpCookie("cookieEmail", txtEmail.Value);
+                        cookie.Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies.Add(cookie);
+
+                    }
+                    Response.Redirect("../Index/Index.aspx");
+                }
                 else throw new Exception("Usuario o password incorrectos");
             }
             catch (Exception ex)

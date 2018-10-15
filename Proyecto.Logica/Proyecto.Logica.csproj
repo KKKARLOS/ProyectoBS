@@ -30,9 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,9 +52,46 @@
   <ItemGroup>
     <Compile Include="BL\clsConexion.cs" />
     <Compile Include="BL\clsEstado.cs" />
+    <Compile Include="BL\clsGeneral.cs" />
     <Compile Include="BL\clsPosiblesClientes.cs" />
     <Compile Include="BL\clsPrioridad.cs" />
+    <Compile Include="BL\clsRecuperarPassword.cs" />
+    <Compile Include="BL\clsTareas.cs" />
     <Compile Include="BL\clsUsuario.cs" />
+    <Compile Include="Entidades\Estudiantes.cs">
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\ModeloEntityFrameWork.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEntityFrameWork.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\ModeloEntityFrameWork.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\ModeloEntityFrameWork.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEntityFrameWork.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\tbEstadoTareas.cs">
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\tbPosiblesClientes.cs">
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\tbPrioridad.cs">
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\tbTareas.cs">
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\tbUsuarios.cs">
+      <DependentUpon>ModeloEntityFrameWork.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clsCorreo.cs" />
     <Compile Include="Models\clsEstado.cs" />
     <Compile Include="Models\clsPosibleClientes.cs" />
     <Compile Include="Models\clsPrioridad.cs" />
@@ -53,6 +99,31 @@
     <Compile Include="Models\clsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Entidades\ModeloEntityFrameWork.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloEntityFrameWork.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entidades\ModeloEntityFrameWork.edmx.diagram">
+      <DependentUpon>ModeloEntityFrameWork.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entidades\ModeloEntityFrameWork.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloEntityFrameWork.edmx</DependentUpon>
+      <LastGenOutput>ModeloEntityFrameWork.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entidades\ModeloEntityFrameWork.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloEntityFrameWork.edmx</DependentUpon>
+      <LastGenOutput>ModeloEntityFrameWork.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

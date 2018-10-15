@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resources/Templates/Template.Master" AutoEventWireup="true" CodeBehind="PosiblesClientes.aspx.cs" Inherits="Proyecto.Web.Views.PosiblesClientes.PosiblesClientes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenedor" runat="server">
-    <div class="mx-auto mt-5"> 
+    <div class="mx-auto mt-1"> 
+ <%--   <!-- Sweet Alert -->
+    <link href="../../css/sweetalert.css" rel="stylesheet" type="text/css"/>
+    <!-- Sweet Alert-->
+    <script src="../../js/sweetalert.min.js"></script>--%>
+
 <%--primera sección--%>
         <div class="form-group">
             <div class="form-row">
